@@ -1,18 +1,30 @@
-# Salesforce DX Project: Next Steps
+Business Scenario:
+Create a system for managing a professional cleaning services company that operates in a major metropolitan area
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Overview:
+The company works with a team that works with individuals cleaning private homes and also with companies cleaning offices.
 
-## How Do You Plan to Deploy Your Changes?
+The job delivery unit is always cleaners per day. (e.g.: a private homeowner hires one cleaner for one day, a large office hires three cleaners for one day)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+The jobs can be booked individually (ad-hoc) or with the following recurrences: weekly, bi-weekly or monthly
 
-## Configure Your Salesforce DX Project
+Payment method is always a Credit Card.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+The standard rate is 180 USD/cleaner/day, recurring jobs have a 10% discount
 
-## Read All About It
+The company employees works on commission, the gross revenue for each job is split 50/50 (50% is company revenue and 50% is the employee pay)
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+The company needs to keep track of:
+all booked and executed jobs
+the total revenue generated and the number of jobs executed per client
+the amount due and paid and the number of jobs executed by each cleaner
+
+Additional Feature 1:
+A dashboard displaying the number of jobs executed and booked for the current week.
+Display the client address (where the job will be executed on Google Maps)
+
+Additional Feature 2:
+Consider the cleaners are paid every 1st and 15th of each month and design a system that accrues all jobs executed by each cleaner and keep track of all payments made to the cleaner.
+All jobs executed between the 1st and the 14th of each month is paid on the 15th
+All jobs executed between the 15th and last day of the month are paid on the 1s
+
