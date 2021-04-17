@@ -1,0 +1,5 @@
+<aura:component implements="force:lightningQuickActionWithoutheader,force:hasRecordId" access="global" >
+	<c:bookingCreation recordId="{!v.recordId}"  onSubmitReq="{!c.onSubmit}" 
+                          componentName="Create Booking" ></c:bookingCreation>
+  
+</aura:component>
